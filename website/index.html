@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SERA — Personal AI Operator</title>
+  <meta name="description" content="SERA is your personal AI operator on WhatsApp. Give it tasks. Let SERA handle the work." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░ HEADER ░ -->
+  <header>
+    <div class="wordmark">SERA</div>
+    <a href="#connect" class="nav-cta">Get started</a>
+  </header>
+
+  <!-- ░ HERO ░ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-label">Personal AI Operator</p>
+      <h1 class="hero-title">Your tasks.<br>Your tools.<br>One conversation.</h1>
+      <p class="hero-sub">
+        Talk to SERA on WhatsApp and let it search, organize,
+        manage, build and automate your digital work
+        through connected tools.
+      </p>
+      <a id="connect" href="#" class="cta-button" id="whatsapp-cta">
+        <span class="cta-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 1.667C5.397 1.667 1.667 5.397 1.667 10c0 1.503.407 2.91 1.118 4.118L1.667 18.333l4.38-1.093A8.278 8.278 0 0010 18.333c4.603 0 8.333-3.73 8.333-8.333C18.333 5.397 14.603 1.667 10 1.667zm0 15c-1.37 0-2.66-.37-3.77-1.017l-.27-.16-2.6.65.672-2.533-.175-.278A6.617 6.617 0 013.333 10 6.673 6.673 0 0110 3.333 6.673 6.673 0 0116.667 10 6.673 6.673 0 0110 16.667zm3.655-5.003c-.2-.1-1.183-.583-1.367-.65-.183-.066-.317-.1-.45.1-.133.2-.517.65-.633.783-.117.133-.233.15-.433.05-.2-.1-.843-.31-1.607-.99-.594-.53-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.407.09-.09.2-.233.3-.35.1-.116.133-.2.2-.333.066-.133.033-.25-.017-.35-.05-.1-.45-1.083-.617-1.483-.162-.39-.327-.337-.45-.343l-.383-.007c-.133 0-.35.05-.533.25-.183.2-.7.683-.7 1.667s.717 1.933.817 2.067c.1.133 1.41 2.15 3.417 3.017.477.206.85.33 1.14.422.48.153.917.131 1.262.08.385-.058 1.183-.483 1.35-.95.166-.467.166-.867.116-.95-.05-.083-.183-.133-.383-.233z" fill="currentColor"/>
+          </svg>
+        </span>
+        Connect Now on WhatsApp
+      </a>
+      <p class="cta-note">Opens a WhatsApp conversation with SERA</p>
+    </div>
+
+    <div class="hero-demo" aria-hidden="true">
+      <div class="chat-window">
+        <div class="chat-header">
+          <div class="chat-avatar">S</div>
+          <div>
+            <div class="chat-name">SERA</div>
+            <div class="chat-status">online</div>
+          </div>
+        </div>
+        <div class="chat-body">
+          <div class="msg user">Deploy my project to Vercel.</div>
+          <div class="msg sera">
+            I'll deploy <span class="mono">my-app</span> to Vercel.<br><br>
+            🚀 Deploy <strong>my-app</strong> to production?
+          </div>
+          <div class="msg user">Yes.</div>
+          <div class="msg sera typing" id="typing-msg">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="msg sera" id="final-msg" style="display:none">
+            ✅ Deployed. Live at<br>
+            <span class="mono">my-app.vercel.app</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░ WHAT SERA DOES ░ -->
+  <section class="capabilities">
+    <div class="section-inner">
+      <h2 class="section-title">What you can ask SERA</h2>
+      <div class="examples-grid">
+        <div class="example-group">
+          <div class="group-icon">🔍</div>
+          <h3>Web</h3>
+          <p>"Search for the latest Supabase free plan limits."</p>
+          <p>"Find the Node.js LTS release date."</p>
+        </div>
+        <div class="example-group">
+          <div class="group-icon">📧</div>
+          <h3>Gmail</h3>
+          <p>"Check my emails from John."</p>
+          <p>"Send a follow-up to the client."</p>
+        </div>
+        <div class="example-group">
+          <div class="group-icon">📁</div>
+          <h3>Files</h3>
+          <p>"Read this file and summarize it."</p>
+          <p>"Create the config files for my project."</p>
+        </div>
+        <div class="example-group">
+          <div class="group-icon">💻</div>
+          <h3>GitHub</h3>
+          <p>"Create a repo called my-app."</p>
+          <p>"Upload my project files to GitHub."</p>
+        </div>
+        <div class="example-group">
+          <div class="group-icon">🚀</div>
+          <h3>Vercel</h3>
+          <p>"Deploy my project to Vercel."</p>
+          <p>"Check if my deployment is live."</p>
+        </div>
+        <div class="example-group">
+          <div class="group-icon">⏰</div>
+          <h3>Reminders</h3>
+          <p>"Remind me tomorrow at 10 AM to call Sameer."</p>
+          <p>"List my upcoming reminders."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░ HOW IT WORKS ░ -->
+  <section class="how">
+    <div class="section-inner">
+      <h2 class="section-title">How SERA works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>You message SERA on WhatsApp</h3>
+            <p>No app to install. No dashboard to learn. Just a WhatsApp conversation.</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>SERA understands and plans</h3>
+            <p>Powered by Gemini, SERA interprets your request and decides which tools are needed — even for multi-step tasks.</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>SERA executes and confirms</h3>
+            <p>High-stakes actions require your approval. Low-risk tasks run automatically. SERA only reports success when it actually happens.</p>
+          </div>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>You get the result on WhatsApp</h3>
+            <p>A clear, concise answer — with links, data, or confirmations as needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░ CONNECT ░ -->
+  <section class="connect-section">
+    <div class="section-inner center">
+      <h2 class="section-title">Ready to delegate?</h2>
+      <p class="connect-sub">SERA is your private AI operator. Only authorized numbers can access it.</p>
+      <a href="#" class="cta-button cta-large" id="whatsapp-cta-2">
+        <span class="cta-icon">
+          <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 1.667C5.397 1.667 1.667 5.397 1.667 10c0 1.503.407 2.91 1.118 4.118L1.667 18.333l4.38-1.093A8.278 8.278 0 0010 18.333c4.603 0 8.333-3.73 8.333-8.333C18.333 5.397 14.603 1.667 10 1.667zm0 15c-1.37 0-2.66-.37-3.77-1.017l-.27-.16-2.6.65.672-2.533-.175-.278A6.617 6.617 0 013.333 10 6.673 6.673 0 0110 3.333 6.673 6.673 0 0116.667 10 6.673 6.673 0 0110 16.667zm3.655-5.003c-.2-.1-1.183-.583-1.367-.65-.183-.066-.317-.1-.45.1-.133.2-.517.65-.633.783-.117.133-.233.15-.433.05-.2-.1-.843-.31-1.607-.99-.594-.53-.995-1.183-1.112-1.383-.116-.2-.012-.308.088-.407.09-.09.2-.233.3-.35.1-.116.133-.2.2-.333.066-.133.033-.25-.017-.35-.05-.1-.45-1.083-.617-1.483-.162-.39-.327-.337-.45-.343l-.383-.007c-.133 0-.35.05-.533.25-.183.2-.7.683-.7 1.667s.717 1.933.817 2.067c.1.133 1.41 2.15 3.417 3.017.477.206.85.33 1.14.422.48.153.917.131 1.262.08.385-.058 1.183-.483 1.35-.95.166-.467.166-.867.116-.95-.05-.083-.183-.133-.383-.233z" fill="currentColor"/>
+          </svg>
+        </span>
+        Open WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ░ FOOTER ░ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="wordmark">SERA</span>
+      <span class="footer-copy">Personal AI Operator · v0.1</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
