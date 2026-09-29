@@ -7,7 +7,7 @@ const logger = require('./utils/logger');
 const { handleVerification, handleIncoming } = require('./whatsapp/webhook');
 
 const app = express();
-
+app.set('trust proxy', 1);
 // ─── Middleware ───────────────────────────────────────────────────────────────
 
 app.use(express.json({ limit: '10mb' }));
